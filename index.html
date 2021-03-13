@@ -13,10 +13,15 @@
 <body>
 
 
-<iframe src="uv.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-<audio autoplay>
-<source src="uv.mp3" type="audio/mp3">
-</audio>
+<audio src="uv.mp3"></audio>
+<script>
+  function playmusic()
+  {
+  const audio = document.querySelector("audio");
+  audio.volume = 0.2;
+  audio.play();
+  };
+</script>
 
 <div class="slider">
   <div class="slider__slide slider__slide--active" data-slide="1">
@@ -25,7 +30,7 @@
     </div>
     <div class="slider__inner">
       <div class="slider__content">
-        <h1> グエン</h1><a class="go-to-next">next</a>
+        <h1> グエン</h1><a class="go-to-next" onclick="playmusic()">next</a>
       </div>
     </div>
   </div>
@@ -60,3 +65,4 @@
 
 </body>
 </html>
+
